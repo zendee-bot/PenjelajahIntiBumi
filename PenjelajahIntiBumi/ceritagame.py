@@ -41,67 +41,74 @@ class ceritag:
     def pilihsenjata(self):
         print(self.pilihansenjata)
 
-    def cerita1_1(self):
+    #CETAK CERITA
+    def cerita1(self):
         os.system('cls')
         print(self.pembatas , self.teks1_1.format(charinput=self.charinput), self.pembatas)
-    def cerita1_2(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks1_2.format(charinput=self.charinput), self.pembatas)
+        input("Tekan Enter untuk melawan POCONG itu...")
 
-    def cerita2_1(self):
+    def cerita2(self):
         os.system('cls')
         print(self.pembatas , self.teks2_1.format(charinput=self.charinput), self.pembatas)
-    def cerita2_2(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system("cls")
         print(self.pembatas , self.teks2_2.format(charinput=self.charinput), self.pembatas)
-    def cerita2_3(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks2_3.format(charinput=self.charinput), self.pembatas)
+        input("Tekan Enter untuk melawan KUNTILANAK itu...")
 
-    def cerita3_1(self):
+    def cerita3(self):
         os.system('cls')
         print(self.pembatas , self.teks3_1.format(charinput=self.charinput), self.pembatas)
-    def cerita3_2(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks3_2.format(charinput=self.charinput), self.pembatas)
-    def cerita3_3(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks3_3.format(charinput=self.charinput), self.pembatas)
-    def cerita3_4(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks3_4.format(charinput=self.charinput), self.pembatas)
-    def cerita3_5(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks3_5, self.pembatas)
+        input("Tekan Enter untuk melawan KUYANG itu...")
 
-    def cerita4_1(self):
+
+    def cerita4(self):
         os.system('cls')
         print(self.pembatas , self.teks4_1.format(charinput=self.charinput), self.pembatas)
-    def cerita4_2(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks4_2.format(charinput=self.charinput), self.pembatas)
-    def cerita4_3(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks4_3.format(charinput=self.charinput), self.pembatas)
-    def cerita4_4(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks4_4.format(charinput=self.charinput), self.pembatas)
-    def cerita4_5(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.teks4_5, self.pembatas)
+        input("Tekan Enter untuk melawan BANASPATI itu...")
 
-    def ending1(self):
+    def ending(self):
         os.system('cls')
         print(self.pembatas , self.ending_1.format(charinput=self.charinput), self.pembatas)
-    def ending2(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.ending_2, self.pembatas)
-    def ending3(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.ending_3, self.pembatas)
-    def ending4(self):
+        input("Tekan Enter untuk melanjutkan...")
         os.system('cls')
         print(self.pembatas , self.ending_4, self.pembatas)
+        input("Tekan Enter untuk melanjutkan...")
 
     def kalahh(self):
         os.system('cls')
