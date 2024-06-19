@@ -11,12 +11,18 @@ class char:
 
         self.senjata = TanganKosong
 
-    def serang (self, target ) -> None:
-        damage=self.senjata.damage()
+    def serang(self, target, special=False) -> None:
+        damage = self.senjata.damage()
         target.darah -= damage
         target.darah = max(target.darah, 0)
         target.kotak_darah.update()
-        print (f"{self.name} memeberikan {damage} damage ke {target.name} dengan {self.senjata.name}")
+        print(f"{self.name} memberikan {damage} damage ke {target.name} dengan {self.senjata.name}")
+        
+        if special:
+            self.darah -= 20
+            self.darah = max(self.darah, 0)
+            self.kotak_darah.update()
+            print(f"{self.name} menggunakan jurus pambungkas dan darah berkurang 50")
 
 class polisi(char):
     def __init__(self, name:str, darah:int)->None:
