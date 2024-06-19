@@ -15,13 +15,15 @@ def maingame():
 
     if dipake == 1:
         polisii = polisi(name=cerita.charinput, darah=130)
-        polisii.gunakan(keris)
+        senjata_awal=keris
     elif dipake == 2:
         polisii = polisi(name=cerita.charinput, darah=110)
-        polisii.gunakan(ketapel)
+        senjata_awal=ketapel
     elif dipake == 3:
         polisii = polisi(name=cerita.charinput, darah=150)
-        polisii.gunakan(Tombak)
+        senjata_awal=Tombak
+
+    polisii.gunakan(senjata_awal)
 
     Pocong = pocong(name="Pocong", darah=100, senjata=damagepocong)
     Kuntilanak = kuntilanak(name="Kuntilanak", darah=100, senjata=damagekuntilanak)
@@ -33,7 +35,7 @@ def maingame():
     # LAWAN POCONG
     versus(polisii, Pocong)
     while Pocong.darah > 0 and polisii.darah > 0:
-        berantem(polisii, Pocong)
+        berantem(polisii, Pocong, senjata_awal)
     if polisii.darah == 0:
         cerita.kalahh()
         input("Tekan Enter untuk melanjutkan...")
@@ -45,7 +47,7 @@ def maingame():
     # LAWAN KUNTILANAK
     versus(polisii, Kuntilanak)
     while Kuntilanak.darah > 0 and polisii.darah > 0:
-        berantem(polisii, Kuntilanak)
+        berantem(polisii, Kuntilanak, senjata_awal)
     if polisii.darah == 0:
         cerita.kalahh()
         input("Tekan Enter untuk melanjutkan...")
@@ -57,7 +59,7 @@ def maingame():
     # LAWAN KUYANG
     versus(polisii, Kuyang)
     while Kuyang.darah > 0 and polisii.darah > 0:
-        berantem(polisii, Kuyang)
+        berantem(polisii, Kuyang, senjata_awal)
     if polisii.darah == 0:
         cerita.kalahh()
         input("Tekan Enter untuk melanjutkan...")
@@ -69,7 +71,7 @@ def maingame():
     # LAWAN BANASPATI
     versus(polisii, Banaspati)
     while Banaspati.darah > 0 and polisii.darah > 0:
-        berantem(polisii, Banaspati)
+        berantem(polisii, Banaspati, senjata_awal)
     if polisii.darah == 0:
         cerita.kalahh()
         input("Tekan Enter untuk melanjutkan...")
