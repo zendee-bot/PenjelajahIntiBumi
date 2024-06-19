@@ -1,6 +1,6 @@
 import os
 from ceritagame import ceritag
-from senjata import Juruspambungkas, TanganKosong
+from senjata import Juruspambungkas
 
 cerita = ceritag()
 
@@ -36,19 +36,21 @@ def angkainputulangjurus(huruf=""):
 
 def resetdarah (char):
      char.darah=char.darah_max
+     char.kotak_darah.update()
 
-def tanyapakejurus(polisii, enemy):
-    choice = angkainputulangjurus("Pilih serangan: 1. Serang biasa 2. Jurus Pambungkas\nPilihan: ")
+def tanyapakejurus(polisii, enemy, senjata_awal):
+    choice = angkainputulangjurus("Pilih serangan: 1. Serang biasa 2. Jurus Pambungkas\n (WARNING : Jurus Pambungkas mengurangi HP sebesar 20 !!!\nPilihan: ")
     if choice == 2:
         polisii.gunakan(Juruspambungkas)
         polisii.serang(enemy, special=True)
+        polisii.gunakan(senjata_awal)  # Kembali ke senjata awal setelah menggunakan jurus pambungkas
     else:
         polisii.serang(enemy)
 
-def berantem(polisii, enemy):
+def berantem(polisii, enemy, senjata_awal):
         os.system("cls") 
         cerita.pembatass()
-        tanyapakejurus(polisii, enemy)
+        tanyapakejurus(polisii, enemy, senjata_awal)
         enemy.serang(polisii)
 
         print ("\n<-------FIGHT------->")
